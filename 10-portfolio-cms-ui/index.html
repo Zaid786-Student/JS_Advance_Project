@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio CMS UI</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1>🗂️ Portfolio CMS (Client‑Side)</h1>
+    <form id="projectForm" class="card">
+      <input type="hidden" name="id" />
+      <div class="grid">
+        <label>Title
+          <input type="text" name="title" required/>
+        </label>
+        <label>Tag
+          <input type="text" name="tag" placeholder="e.g., JavaScript"/>
+        </label>
+        <label class="full">Description
+          <textarea name="desc" rows="4"></textarea>
+        </label>
+        <label class="full">Image URL
+          <input type="url" name="img" placeholder="https://picsum.photos/600/400"/>
+        </label>
+      </div>
+      <div class="actions">
+        <button type="submit" id="saveBtn">Save</button>
+        <button type="button" id="resetBtn" class="ghost">Reset</button>
+        <input type="search" id="search" placeholder="Search title or tag"/>
+        <select id="sort">
+          <option value="newest">Newest</option>
+          <option value="title">Title A–Z</option>
+        </select>
+      </div>
+    </form>
+
+    <section id="grid" class="cards"></section>
+  </main>
+  <template id="cardTpl">
+    <article class="card project">
+      <img class="thumb" alt="Project image"/>
+      <div class="meta">
+        <h3 class="title"></h3>
+        <p class="tag"></p>
+      </div>
+      <p class="desc"></p>
+      <div class="row">
+        <button class="pill" data-action="edit">Edit</button>
+        <button class="pill" data-action="delete">Delete</button>
+      </div>
+    </article>
+  </template>
+  <script src="app.js"></script>
+</body>
+</html>

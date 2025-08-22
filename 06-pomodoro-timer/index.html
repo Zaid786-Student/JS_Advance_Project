@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1>🍅 Pomodoro Timer</h1>
+    <section class="timer-card">
+      <div class="mode-switch">
+        <button class="mode-btn" data-mode="work">Work</button>
+        <button class="mode-btn" data-mode="short">Short Break</button>
+        <button class="mode-btn" data-mode="long">Long Break</button>
+      </div>
+      <div id="display" aria-live="polite">25:00</div>
+      <div class="controls">
+        <button id="startPauseBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+        <button id="skipBtn">Skip</button>
+      </div>
+      <div class="settings">
+        <label>Work (min)
+          <input type="number" id="workInput" min="1" value="25">
+        </label>
+        <label>Short (min)
+          <input type="number" id="shortInput" min="1" value="5">
+        </label>
+        <label>Long (min)
+          <input type="number" id="longInput" min="1" value="15">
+        </label>
+        <label>Auto next
+          <input type="checkbox" id="autoNext" checked>
+        </label>
+      </div>
+      <div class="cycle">
+        Cycles completed: <span id="cycles">0</span>
+      </div>
+      <progress id="progress" max="1" value="0"></progress>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

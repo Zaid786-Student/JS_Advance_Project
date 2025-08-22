@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Auto-Save (LocalStorage)</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1>📝 Form Auto‑Save</h1>
+    <p class="muted">Your input is saved automatically to your browser. Close & reopen to test.</p>
+    <form id="profileForm" class="card" autocomplete="off">
+      <div class="grid">
+        <label>Full Name
+          <input type="text" name="fullName" placeholder="e.g., Zaid Khan"/>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="you@example.com"/>
+        </label>
+        <label>Role
+          <select name="role">
+            <option value="">Select…</option>
+            <option>Student</option>
+            <option>Developer</option>
+            <option>Designer</option>
+          </select>
+        </label>
+        <label>Portfolio URL
+          <input type="url" name="portfolio" placeholder="https://..."/>
+        </label>
+        <label class="full">About
+          <textarea name="about" rows="5" placeholder="Short bio"></textarea>
+        </label>
+        <fieldset class="full">
+          <legend>Skills</legend>
+          <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+          <label><input type="checkbox" name="skills" value="React"> React</label>
+        </fieldset>
+      </div>
+      <div class="actions">
+        <button type="button" id="clearBtn">Clear Saved Data</button>
+        <span id="status" class="muted" aria-live="polite"></span>
+      </div>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

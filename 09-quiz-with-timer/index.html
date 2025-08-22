@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz with Timer & Score</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1>🧠 Quiz Master</h1>
+    <section class="card" id="startCard">
+      <label>Number of Questions
+        <input type="number" id="numQuestions" min="1" max="10" value="5"/>
+      </label>
+      <label>Time (seconds)
+        <input type="number" id="totalTime" min="10" value="60"/>
+      </label>
+      <button id="startBtn">Start Quiz</button>
+    </section>
+
+    <section class="card hidden" id="quizCard">
+      <div class="topbar">
+        <div>Q <span id="qIndex">1</span>/<span id="qTotal">5</span></div>
+        <div>⏳ <span id="time">60</span>s</div>
+        <progress id="progress" max="100" value="0"></progress>
+      </div>
+      <div id="question"></div>
+      <div id="answers" class="answers"></div>
+      <div class="actions">
+        <button id="nextBtn" disabled>Next</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="resultCard">
+      <h2>Results</h2>
+      <p>Score: <strong id="scoreText"></strong></p>
+      <button id="restartBtn">Restart</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

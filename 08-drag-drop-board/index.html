@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drag & Drop Task Board</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1>📌 Task Board</h1>
+    <form id="newTaskForm" class="new-task">
+      <input id="taskInput" type="text" placeholder="Add a task and press Enter" required />
+      <button type="submit">Add</button>
+    </form>
+    <section class="board" id="board" aria-label="Task Board">
+      <div class="column" data-col="todo">
+        <h2>To Do</h2>
+        <div class="dropzone" id="todo"></div>
+      </div>
+      <div class="column" data-col="doing">
+        <h2>Doing</h2>
+        <div class="dropzone" id="doing"></div>
+      </div>
+      <div class="column" data-col="done">
+        <h2>Done</h2>
+        <div class="dropzone" id="done"></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
