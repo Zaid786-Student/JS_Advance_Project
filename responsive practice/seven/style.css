@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.pricing-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.pricing-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* Highlight Pro Plan */
+.featured {
+  background: #212121;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.featured button {
+  background: #fff;
+  color: #212121;
+}
+
+.featured button:hover {
+  background: #f4f4f4;
+}
+
+/* Tablet (≥600px) */
+@media (min-width: 600px) {
+  .pricing-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .pricing-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
